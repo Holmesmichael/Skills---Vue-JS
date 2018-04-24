@@ -2,7 +2,7 @@
   <div class="hello">
     <div class="holder">
       <form @submit.prevent="addSkill">
-      <input type="text" placeholder="Enter a skill you have..." v-model="skill" v-validate="'min:5'" name="skill">
+      <input type="text" placeholder="Enter a talent you have..." v-model="skill" v-validate="'min:5'" name="skill">
       
         <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
           <p class="alert" v-if="errors.has('skill')">{{ errors.first('skill') }}</p>
@@ -10,7 +10,7 @@
       </form>
 
       <ul>
-        <transition-group name="list" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
+        <transition-group name="list" enter-active-class="animated rollIn" leave-active-class="animated rollOut">
         <li v-for="(data, index) in skills" :key='index'>
         {{ data.skill}}
           <i class="fa fa-minus-circle" v-on:click="remove(index)"></i>
@@ -18,7 +18,7 @@
         </transition-group>
       </ul>
 
-      <p>These are the skillz you possess.</p>     
+      <p>These are the talents you possess.</p>     
     </div>
   </div>
 </template>
@@ -91,11 +91,12 @@ export default {
     border: 0;
     padding: 20px;
     font-size: 1.3em;
-    background-color: #323333;
+    background-color: #223333;
     color: #687F7F;
+    text-align: center;
   }
   .alert {
-    background: #fdf2ce;
+    background: #f0e4bd;
     font-weight: bold;
     display: inline-block;
     padding: 5px;

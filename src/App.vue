@@ -40,15 +40,15 @@ export default {
   }
 
   nav {
-    padding: 20px 20px 20px 0;
+    padding: 20px 20px 20px 212px;
   }
 
   nav a {
     padding: 10px;
     text-decoration: none;
-    background: #fff;
+    background:rgb(164, 247, 247);
     border-radius: 3px;
-    color: rgb(0, 110, 255);
+    color: rgb(82, 68, 52);
     font-weight: bold;
     margin-right: 15px;
   }
